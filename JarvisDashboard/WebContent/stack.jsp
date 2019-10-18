@@ -36,7 +36,7 @@
 				<li>Kubernetes Cluster - Container Orchestration Management</li>
 			</ul>
 			<button type="button" class="btn btn-lg btn-block btn-primary" 
-			data-toggle="modal" data-target="#DevOpsModalCenter">Launch
+			data-toggle="modal" data-target="#DevOpsModalStackCenter">Launch
 			</button>
 		</div>
 	</div>

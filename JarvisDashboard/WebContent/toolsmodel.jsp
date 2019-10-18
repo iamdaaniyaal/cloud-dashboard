@@ -1,11 +1,13 @@
-<div class="modal fade text-center" id="DevOpsModalCenter" tabindex="-1"
-	role="dialog" aria-labelledby="DevOpsModalCenterTitle"
+<%-- DevOps modal --%>
+
+<div class="modal fade text-center" id="DevOpsModalToolsCenter" tabindex="1"
+	role="dialog" aria-labelledby="DevOpsModalToolsCenterTitle"
 	aria-hidden="true">
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<form id="myForm" action="trigger" method="post">
 				<div class="modal-header">
-					<h5 class="modal-title text-primary" id="DevOpsModalLongTitle">DevOps
+					<h5 class="modal-title text-primary" id="DevOpsModalToolsLongTitle">DevOps
 						Tools - Summary</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
@@ -44,7 +46,7 @@
 					</p>
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Stack
+							<span class="input-group-text" id="basic-addon1">Tools
 								Name</span>
 						</div>
 						<input type="text" class="form-control" name="tool_name"
@@ -121,3 +123,4 @@
 		</div>
 	</div>
 </div>
+

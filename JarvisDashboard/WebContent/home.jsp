@@ -1,4 +1,5 @@
 
+<html>
 <%
 	String triggerEvent = (String) request.getAttribute("triggerEvent");
 %>
@@ -157,3 +158,5 @@
 		text : 'Thumbnail'
 	});
 </script>
+
+</html>

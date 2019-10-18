@@ -148,11 +148,12 @@
 package com.cts.data.servlet;
 
 import java.io.BufferedReader;
+import java.util.Arrays;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
+import java.util.*;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -214,7 +215,8 @@ public class TriggerServlet extends HttpServlet {
               // String JENKINS_DEPLOY_JOB =
               // "http://35.193.10.1:8080/job/StackDeploy/buildWithParameters";
 
-              String JENKINS_DEPLOY_JOB = "http://35.193.10.1:8080/job/jenkins/buildWithParameters";
+//              String JENKINS_DEPLOY_JOB = "http://35.193.10.1:8080/job/jenkins/buildWithParameters";
+              String JENKINS_DEPLOY_JOB = "http://35.193.10.1:8080/job/StackDeploy/buildWithParameters";
               String JENKINS_USER_TOKEN = "jenkins:jenkins";
 
               triggerProdInfraJob(JENKINS_DEPLOY_JOB, JENKINS_USER_TOKEN, DATA);
@@ -235,19 +237,35 @@ public class TriggerServlet extends HttpServlet {
 
               System.out.println("Selected toolarray ==> " + tools);
               System.out.println("Selected tool_name ==> " + tool_name);
-
-              String DATA = "tools=" + tools + "&tool_name=" + tool_name;
+              
+              
+              System.out.println( Arrays.toString(tools));
+              StringBuilder sb = new StringBuilder();
+        		for (String str : tools)
+        			sb.append(str).append(",");
+        		System.out.println("some" +sb.substring(0, sb.length() - 1));
+//        		return sb.substring(0, sb.length() - 1);
+        		
+              String mytools = sb.substring(0, sb.length() - 1);
+              System.out.println(mytools);
+            
+              String DATA = "tools=" + mytools + "&tool_name=" + tool_name;
               DATA = DATA.toLowerCase();
+              
+              
 
               // String JENKINS_DEPLOY_JOB =
-              // "http://35.193.10.1:8080/job/ToolDeploy/buildWithParameters";
+//               "http://35.193.10.1:8080/job/ToolDeploy/buildWithParameters";
 
-              String JENKINS_DEPLOY_JOB = "http://35.193.10.1:8080/job/jenkins/buildWithParameters";
+//              String JENKINS_DEPLOY_JOB = "http://35.193.10.1:8080/job/jenkins/buildWithParameters";
+              String JENKINS_DEPLOY_JOB = "http://35.193.10.1:8080/job/ToolDeploy/buildWithParameters";
               String JENKINS_USER_TOKEN = "jenkins:jenkins";
 
               triggerProdInfraJob(JENKINS_DEPLOY_JOB, JENKINS_USER_TOKEN, DATA);
               
               request.setAttribute("triggerEvent", tool);
+              
+              
 
               return DATA;
 
@@ -271,5 +289,7 @@ public class TriggerServlet extends HttpServlet {
               }
               return false;
        }
+       
+      
 
 }

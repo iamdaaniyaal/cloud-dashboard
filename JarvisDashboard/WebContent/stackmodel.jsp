@@ -221,14 +221,14 @@
 
 <%-- DevOps modal --%>
 
-<div class="modal fade text-center" id="DevOpsModalCenter" tabindex="-1"
-	role="dialog" aria-labelledby="DevOpsModalCenterTitle"
+<div class="modal fade text-center" id="DevOpsModalStackCenter" tabindex="-1"
+	role="dialog" aria-labelledby="DevOpsModalStackCenterTitle"
 	aria-hidden="true">
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<form id="myForm" action="trigger" method="post">
 				<div class="modal-header">
-					<h5 class="modal-title text-primary" id="DevOpsModalLongTitle">DevOps
+					<h5 class="modal-title text-primary" id="DevOpsModalStackLongTitle">DevOps
 						- Stack Summary</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
@@ -336,7 +336,7 @@
 				</div>
 				<div class="modal-footer">
 
-					<input type="hidden" name="stack" id="stack" value="DevOps" /> <input
+					<input type="hidden" name="stack" id="stack" value="devopsstack" /> <input
 						type="hidden" name="builttype" id="builttype" value="stack" />
 					<button type="button" class="btn btn-secondary"
 						data-dismiss="modal">Close</button>
@@ -344,6 +344,6 @@
 
 				</div>
 			</form>
-		</div>
+			</div>
 	</div>	
 </div>

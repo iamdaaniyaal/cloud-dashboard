@@ -1,4 +1,3 @@
-
 <div class="card-deck mb-3 text-center">
 	<div class="card mb-4 box-shadow">
 
@@ -17,7 +16,7 @@
 			</ul>
 			
 				<button type="button" class="btn btn-lg btn-block btn-success"
-				data-toggle="modal" data-target="#DevOpsModalCenter">Launch</button>
+				data-toggle="modal" data-target="#DevOpsModalToolsCenter">Launch</button>
 		</div>
 
 	</div>
