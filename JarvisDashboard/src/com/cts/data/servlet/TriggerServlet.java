@@ -203,12 +203,14 @@ public class TriggerServlet extends HttpServlet {
               String stack = request.getParameter("stack");
               String machine_type = request.getParameter("machine_type");
               String stack_name = request.getParameter("stack_name");
+              String github_url = request.getParameter("github_url");
 
               System.out.println("Selected Stack ==> " + stack);
               System.out.println("Selected machine_type ==> " + machine_type);
               System.out.println("Selected stack_name ==> " + stack_name);
+              System.out.println("Selected github_url ==> " + github_url);
 
-              String DATA = "stack=" + stack + "&machine_type=" + machine_type + "&stack_name=" + stack_name;
+              String DATA = "stack=" + stack + "&machine_type=" + machine_type + "&stack_name=" + stack_name + "&git_url" + github_url;
               
               DATA = DATA.toLowerCase();
 
@@ -216,7 +218,7 @@ public class TriggerServlet extends HttpServlet {
               // "http://35.193.10.1:8080/job/StackDeploy/buildWithParameters";
 
 //              String JENKINS_DEPLOY_JOB = "http://35.193.10.1:8080/job/jenkins/buildWithParameters";
-              String JENKINS_DEPLOY_JOB = "http://35.193.10.1:8080/job/StackDeploy/buildWithParameters";
+              String JENKINS_DEPLOY_JOB = "http://35.223.127.106:8080/job/StackDeploy/buildWithParameters";
               String JENKINS_USER_TOKEN = "jenkins:jenkins";
 
               triggerProdInfraJob(JENKINS_DEPLOY_JOB, JENKINS_USER_TOKEN, DATA);
@@ -258,7 +260,7 @@ public class TriggerServlet extends HttpServlet {
 //               "http://35.193.10.1:8080/job/ToolDeploy/buildWithParameters";
 
 //              String JENKINS_DEPLOY_JOB = "http://35.193.10.1:8080/job/jenkins/buildWithParameters";
-              String JENKINS_DEPLOY_JOB = "http://35.193.10.1:8080/job/ToolDeploy/buildWithParameters";
+              String JENKINS_DEPLOY_JOB = "http://35.223.127.106:8080/job/ToolDeploy/buildWithParameters";
               String JENKINS_USER_TOKEN = "jenkins:jenkins";
 
               triggerProdInfraJob(JENKINS_DEPLOY_JOB, JENKINS_USER_TOKEN, DATA);

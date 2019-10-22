@@ -12,10 +12,11 @@
 				<li>Linux - Operating System</li>
 				<li>Apache - Web Server</li>
 				<li>MySQL - Database Server</li>
-				<li>Perl, PHP or Python - Scripting languages</li>
+				<li>PHP - Scripting language</li>
 
 			</ul>
-			<button type="button" class="btn btn-lg btn-block btn-primary"
+			<br/><br/><br/><br/><br/>
+			<button type="button" class="btn btn-lg btn-block btn-primary" 
 				data-toggle="modal" data-target="#LAMPModalCenter">Launch</button>
 		</div>
 
@@ -26,13 +27,12 @@
 			<h4 class="my-0 font-weight-normal">DevOps</h4>
 		</div>
 		<div class="card-body">
-			<b>Free and open-source JavaScript software stack for building
-				dynamic web sites and web applications.</b>
+			<b>Free and open-source DevOps software stack for deploying applications to Kubernetes Cluster through a CI/CD pipeline</b>
 			<ul class="list-unstyled mt-3 mb-4">
-				<li>Jenkins - NoSQL Database</li>
-				<li>Harbor - Web Application Framework</li>
-				<li>SonarQube - JavaScript MVC Framework</li>
-				<li>ELK - Execution Environment</li>
+				<li>Jenkins - CI / CD Tool</li>
+				<li>Harbor - Open source cloud native registry</li>
+				<li>SonarQube - Continuous inspection of code quality tool</li>
+				<li>ELK - Open source log analysis platform</li>
 				<li>Kubernetes Cluster - Container Orchestration Management</li>
 			</ul>
 			<button type="button" class="btn btn-lg btn-block btn-primary" 
@@ -54,6 +54,7 @@
 				<li>AngularJS - JavaScript MVC Framework</li>
 				<li>Node.js - Execution Environment</li>
 			</ul>
+			<br/><br/><br/><br/><br/>
 			<button type="button" class="btn btn-lg btn-block btn-primary" 
 			data-toggle="modal" data-target="#MEANModalCenter">Launch
 			</button>
@@ -75,6 +76,7 @@
 				<li>React.js - JavaScript MVC Framework</li>
 				<li>Node.js - Execution Environment</li>
 			</ul>
+			<br/><br/><br/><br/><br/>
 			<button type="button" class="btn btn-lg btn-block btn-primary">Launch
 			</button>
 		</div>
@@ -96,6 +98,7 @@
 				<li>React.js - JavaScript MVC Framework</li>
 				<li>Node.js - Execution Environment</li>
 			</ul>
+			<br/>
 			<button type="button" class="btn btn-lg btn-block btn-primary">Launch
 			</button>
 		</div>
@@ -115,7 +118,8 @@
 				<li>React.js - JavaScript MVC Framework</li>
 				<li>Node.js - Execution Environment</li>
 			</ul>
-			<button type="button" class="btn btn-lg btn-block btn-primary">Launch
+			<br/>
+			<button type="button" class="btn btn-lg btn-block btn-primary" data-toggle="modal" data-target="#WPModalCenter">Launch
 			</button>
 		</div>
 
@@ -133,6 +137,7 @@
 				<li>Logstash - Log Pipeline Tool</li>
 				<li>Kibana - Visualization layer on top of Elasticsearch</li>
 			</ul>
+			<br/><br/>
 			<button type="button" class="btn btn-lg btn-block btn-primary">Launch
 			</button>
 		</div>
