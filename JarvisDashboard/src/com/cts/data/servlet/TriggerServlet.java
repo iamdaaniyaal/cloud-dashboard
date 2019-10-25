@@ -266,6 +266,7 @@ public class TriggerServlet extends HttpServlet {
               triggerProdInfraJob(JENKINS_DEPLOY_JOB, JENKINS_USER_TOKEN, DATA);
               
               request.setAttribute("triggerEvent", tool);
+//              request.setAttribute("triggerEvent1", tool);
               
               
 

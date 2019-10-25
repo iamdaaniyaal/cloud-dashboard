@@ -1,8 +1,8 @@
 <%-- DevOps modal --%>
 
-<div class="modal fade text-center" id="DevOpsModalToolsCenter" tabindex="1"
-	role="dialog" aria-labelledby="DevOpsModalToolsCenterTitle"
-	aria-hidden="true">
+<div class="modal fade text-center" id="DevOpsModalToolsCenter"
+	tabindex="1" role="dialog"
+	aria-labelledby="DevOpsModalToolsCenterTitle" aria-hidden="true">
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<form id="myForm" action="trigger" method="post">
@@ -70,7 +70,19 @@
 								<th scope="row">SonarQube</th>
 								<td>Catch bugs and vulnerabilities</td>
 								<td rowspan="1">1</td>
-								<td rowspan="4">n1-standard-1</td>
+								<!-- <td rowspan="5">n1-standard-1</td> -->
+								<td rowspan="5"><select class="form-control"
+									id="machine-type" name="machine_type">
+										<option value="n1-standard-1">n1-standard-1</option>
+										<option value="n1-standard-2">n1-standard-2</option>
+										<option value="n1-standard-4">n1-standard-4</option>
+										<option value="n1-standard-8">n1-standard-8</option>
+										<option value="n1-standard-16">n1-standard-16</option>
+										<option value="n1-standard-32">n1-standard-32</option>
+										<option value="n1-standard-64">n1-standard-64</option>
+										<option value="n1-standard-96">n1-standard-96</option>
+
+								</select></td>
 
 
 							</tr>
@@ -79,7 +91,7 @@
 							<tr>
 								<td><input type="checkbox" name="tools" value="Maven" />&nbsp;</td>
 								<th scope="row">Maven</th>
-								<td>Project management and comprehension tool</td>
+								<td>Build automation tool</td>
 								<td rowspan="1">1</td>
 
 
@@ -95,7 +107,15 @@
 							<tr>
 								<td><input type="checkbox" name="tools" value="Jenkins" />&nbsp;</td>
 								<th scope="row">Jenkins</th>
-								<td>Automation Server</td>
+								<td>CI / CD Automation Server</td>
+								<td rowspan="1">1</td>
+
+							</tr>
+
+							<tr>
+								<td><input type="checkbox" name="tools" value="BitBucket" />&nbsp;</td>
+								<th scope="row">BitBucket</th>
+								<td>Version Control System</td>
 								<td rowspan="1">1</td>
 
 							</tr>
@@ -116,6 +136,8 @@
 					<input type="hidden" name="tool" id="tool" value="DevOps" />
 					<button type="button" class="btn btn-secondary"
 						data-dismiss="modal">Close</button>
+						
+						
 					<button type="submit" class="btn btn-primary">Launch</button>
 
 				</div>

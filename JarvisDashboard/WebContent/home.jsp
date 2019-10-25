@@ -2,6 +2,7 @@
 <html>
 <%
 	String triggerEvent = (String) request.getAttribute("triggerEvent");
+/* 	String triggerEvent1 = (String) request.getAttribute("triggerEvent1"); */
 %>
 
 <head>
@@ -81,6 +82,7 @@
 	<div class="alert alert-warning alert-dismissible fade show"
 		role="alert">
 		Please wait !! Stack <strong><%=triggerEvent%></strong> Setup InProgress.
+		<%--  <strong><%=triggerEvent1%></strong> --%>
 		<button type="button" class="close" data-dismiss="alert"
 			aria-label="Close">
 			<span aria-hidden="true">&times;</span>
