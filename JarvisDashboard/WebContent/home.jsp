@@ -2,7 +2,11 @@
 <html>
 <%
 	String triggerEvent = (String) request.getAttribute("triggerEvent");
-/* 	String triggerEvent1 = (String) request.getAttribute("triggerEvent1"); */
+	String triggerEventTool = (String) request.getAttribute("triggerEventTool");
+	String mytools = (String) request.getAttribute("mytools");
+	String elasticsearch = (String) request.getAttribute("elasticsearch");
+	String logorkib = (String) request.getAttribute("logorkib");
+	String logandkib = (String) request.getAttribute("logandkib");
 %>
 
 <head>
@@ -49,9 +53,8 @@
 	<div
 		class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
 		<h1 class="display-5">JARVIS</h1>
-		<p class="lead">Quickly build an effective pricing table for your
-			potential customers with this Bootstrap example. It's built with
-			default Bootstrap components and utilities with little customization.</p>
+		<p class="lead">Self service portal to provision different end to
+			end Stacks & Tools on Google Cloud Platform (GCP).</p>
 
 
 		<nav>
@@ -74,14 +77,14 @@
 	</div>
 
 
-	<%
-			
-				if (triggerEvent != null && triggerEvent.length() > 0) {
-			%>
+
+		<%
+		if (triggerEvent != null && triggerEvent.length() > 0) {
+	%>
 
 	<div class="alert alert-warning alert-dismissible fade show"
 		role="alert">
-		Please wait !! Stack <strong><%=triggerEvent%></strong> Setup InProgress.
+		<strong><%=triggerEvent%></strong> Setup InProgress.
 		<%--  <strong><%=triggerEvent1%></strong> --%>
 		<button type="button" class="close" data-dismiss="alert"
 			aria-label="Close">
@@ -90,11 +93,102 @@
 	</div>
 
 	<%
-				}
-			%>
+		}
+	%>
+	
+	
+
+	<%
+		if (triggerEventTool != null && triggerEventTool.length() > 0) {
+	%>
+
+	<div class="alert alert-warning alert-dismissible fade show"
+		role="alert">
+		<strong><%=triggerEventTool%></strong> Setup InProgress.
+		You have selected the following tools  - <strong> <%=mytools%> </strong>
+		<%--  <strong><%=triggerEvent1%></strong> --%>
+		<button type="button" class="close" data-dismiss="alert"
+			aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<%
+		}
+	%>
 
 
 
+	<%
+		if (elasticsearch != null && elasticsearch.length() > 0) {
+	%>
+
+	<div class="alert alert-warning alert-dismissible fade show"
+		role="alert">
+		You have selected <strong><%=elasticsearch%></strong> as one of the
+		Tool. <strong><%=elasticsearch%></strong> works along with <strong>Logstash
+			and Kibana</strong>. Kindly refer to <strong>ELK Stack</strong> on the <strong>Pre
+			Built Stack Tab</strong>. Setup of the other selected tools from <strong>
+			Other Developer Tools</strong> is in Progress
+
+		<%--  <strong><%=triggerEvent1%></strong> --%>
+		<button type="button" class="close" data-dismiss="alert"
+			aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<%
+		}
+	%>
+
+
+
+	<%
+		if (logorkib != null && logorkib.length() > 0) {
+	%>
+
+	<div class="alert alert-warning alert-dismissible fade show"
+		role="alert">
+		You have selected <strong><%=logorkib%></strong> as one of the Tool. <strong><%=logorkib%></strong>
+		works together as <strong>ELK Stack</strong>. Kindly refer to <strong>ELK
+			Stack</strong> on the <strong>Pre Built Stack Tab</strong>. Setup of the other
+		selected tools from <strong> Logging & Monitoring Tools</strong> is in
+		Progress
+
+		<%--  <strong><%=triggerEvent1%></strong> --%>
+		<button type="button" class="close" data-dismiss="alert"
+			aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<%
+		}
+	%>
+
+	<%
+		if (logandkib != null && logandkib.length() > 0) {
+	%>
+
+	<div class="alert alert-warning alert-dismissible fade show"
+		role="alert">
+		You have selected <strong><%=logandkib%></strong> as two of the Tools.
+		<strong><%=logandkib%></strong> works along with <strong>Elasticsearch</strong>.
+		Kindly refer to <strong>ELK Stack</strong> on the <strong>Pre
+			Built Stack Tab</strong>. Setup of the other selected tools from <strong>
+			Logging & Monitoring Tools</strong> is in Progress
+
+		<%--  <strong><%=triggerEvent1%></strong> --%>
+		<button type="button" class="close" data-dismiss="alert"
+			aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<%
+		}
+	%>
 
 	<hr>
 

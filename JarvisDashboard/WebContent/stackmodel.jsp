@@ -96,6 +96,7 @@
 
 
 
+<%-- LAMP Stack Modal --%>
 <div class="modal fade text-center" id="LAMPModalCenter" tabindex="-1"
 	role="dialog" aria-labelledby="LAMPModalCenterTitle" aria-hidden="true">
 	<div class="modal-dialog modal-lg" role="document">
@@ -219,7 +220,7 @@
 
 
 
-<%-- DevOps modal --%>
+<%-- DevOps Stack Modal --%>
 
 <div class="modal fade text-center" id="DevOpsModalStackCenter"
 	tabindex="-1" role="dialog"
@@ -368,7 +369,7 @@
 </div>
 
 
-<%-- MEAN Modal --%>
+<%-- MEAN Stack Modal --%>
 <div class="modal fade text-center" id="MEANModalCenter" tabindex="-1"
 	role="dialog" aria-labelledby="MEANModalCenterTitle" aria-hidden="true">
 	<div class="modal-dialog modal-lg" role="document">
@@ -492,7 +493,7 @@
 
 
 
-<%-- MERN Modal --%>
+<%-- MERN Stack Modal --%>
 <div class="modal fade text-center" id="MERNModalCenter" tabindex="-1"
 	role="dialog" aria-labelledby="MERNModalCenterTitle" aria-hidden="true">
 	<div class="modal-dialog modal-lg" role="document">
@@ -616,8 +617,135 @@
 
 
 
+<%--Analytics Stack Modal --%>
 
-<%-- WordPress modal --%>
+<div class="modal fade text-center" id="AnalyticsModalStackCenter"
+	tabindex="-1" role="dialog"
+	aria-labelledby="AnalyticsModalStackCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<form id="myForm" action="trigger" method="post">
+				<div class="modal-header">
+					<h5 class="modal-title text-primary" id="AnalyticsModalStackLongTitle">Analytics
+						- Stack Summary</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<br>
+
+					<p class="text-primary">
+						<b> Target Environment Details</b>
+					</p>
+					<table class="table table-bordered border-primary"
+						style="margin-top: 2%; margin-bottom: 2%;">
+						<thead>
+							<tr class="thead-light">
+								<th scope="col">Organization</th>
+								<th scope="col">Project</th>
+								<th scope="col">Region</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">No Organisation</th>
+								<td>cloudglobaldelivery-1000135575</td>
+								<td>us-east1</td>
+							</tr>
+
+						</tbody>
+					</table>
+
+
+					<p class="text-primary">
+						<b> Analytics Stack Details</b>
+					</p>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1">Stack
+								Name</span>
+						</div>
+						<input type="text" class="form-control" name="stack_name"
+							placeholder="Stack Name" required="required"
+							aria-label="Stack Name" aria-describedby="basic-addon1">
+					</div>
+
+					<table class="table table-bordered border-primary"
+						style="margin-top: 2%; margin-bottom: 2%;">
+						<thead>
+							<tr class="thead-light">
+								<th scope="col">Stack</th>
+								<th scope="col">Description</th>
+								<th scope="col">Analytics Stack Items/Services</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">BigQuery (Dataset & Table)</th>
+								<td>RESTful web service that enables interactive analysis of massive datasets working in conjunction with Google Storage</td>
+								<td>2 (1 Dataset + 1 Table)</td>
+
+
+								
+
+							</tr>
+							<tr>
+								<th scope="row">Cloud Pub/Sub</th>
+								<td>Real-time messaging service for independent applications to publish & subscribe to asynchronous events</td>
+								<td>1 Cloud Pub/Sub Topic</td>
+							</tr>
+							<tr>
+								<th scope="row">Cloud Scheduler</th>
+								<td>Fully managed enterprise-grade cron job scheduler</td>
+								<td>1 Cloud Scheduler Job</td>
+
+							</tr>
+							<tr>
+								<th scope="row">Cloud Storage Bucket</th>
+								<td>Object Storage</td>
+								<td>1 Storage Bucket</td>
+
+
+							</tr>
+							<tr>
+								<th scope="row">Cloud Dataflow</th>
+								<td>Stream and batch data processing service</td>
+								<td>1 Cloud Dataflow Job</td>
+								
+
+							</tr>
+							<tr class="thead-light">
+								<th scope="row" colspan="2">Total Items/Services</th>
+								<th colspan="2">6</th>
+							</tr>
+
+						</tbody>
+					</table>
+
+					Estimated costs: <span class="text-danger"><b>
+							$13.61/month</b></span>
+				</div>
+				<div class="modal-footer">
+
+					<input type="hidden" name="stack" id="stack" value="analytics" />
+					<input type="hidden" name="builttype" id="builttype" value="stack" />
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-primary">Launch</button>
+
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+<%-- WordPress Stack Modal --%>
 <div class="modal fade text-center" id="WPModalCenter" tabindex="-1"
 	role="dialog" aria-labelledby="WPModalCenterTitle" aria-hidden="true">
 	<div class="modal-dialog modal-lg" role="document">
@@ -749,7 +877,7 @@
 
 
 
-<%-- ELK Modal --%>
+<%-- ELK Stack Modal --%>
 <div class="modal fade text-center" id="ELKModalCenter" tabindex="-1"
 	role="dialog" aria-labelledby="ELKModalCenterTitle" aria-hidden="true">
 	<div class="modal-dialog modal-lg" role="document">

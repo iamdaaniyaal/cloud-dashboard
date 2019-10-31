@@ -1,4 +1,7 @@
+<head>
 
+<link href="css/style.css" rel="stylesheet">
+</head>
 <div class="card-deck mb-3 text-center">
 	<div class="card mb-4 box-shadow ">
 
@@ -90,16 +93,24 @@
 			<h4 class="my-0 font-weight-normal">Analytics</h4>
 		</div>
 		<div class="card-body">
-			<b>WordPress is open source software you can use to create a
-				website, blog, or app.</b>
+			<b>Accelerate time to insights and leave the complexities of data
+				analytics behind with Google Cloud Platform (GCP)</b>
 			<ul class="list-unstyled mt-3 mb-4">
-				<li>MongoDB - NoSQL Database</li>
-				<li>Express.js - Web Application Framework</li>
-				<li>React.js - JavaScript MVC Framework</li>
-				<li>Node.js - Execution Environment</li>
+				<li>BigQuery - RESTful web service that
+					enables interactive analysis of massive datasets working in
+					conjunction with Google Storage</li>
+				<li>Cloud Pub/Sub - Real-time messaging service for
+					independent applications to publish & subscribe to asynchronous
+					events</li>
+				<li>Cloud Scheduler - Fully managed enterprise-grade cron
+					job scheduler</li>
+				<li>Cloud Storage Bucket - Object Storage</li>
+				<li>Cloud Dataflow - Stream and batch data processing
+					service</li>
 			</ul>
 			<br />
-			<button type="button" class="btn btn-lg btn-block btn-primary">Launch
+			<button type="button" class="btn btn-lg btn-block btn-primary"
+				data-toggle="modal" data-target="#AnalyticsModalStackCenter">Launch
 			</button>
 		</div>
 
@@ -118,7 +129,7 @@
 					data</li>
 				<li>ELK - Open source log analysis platform</li>
 			</ul>
-			<br />
+			<br /><br><br><br><br><br><br><br><br>
 			<button type="button" class="btn btn-lg btn-block btn-primary"
 				data-toggle="modal" data-target="#WPModalCenter">Launch</button>
 		</div>
@@ -137,7 +148,7 @@
 				<li>Logstash - Log Pipeline Tool</li>
 				<li>Kibana - Visualization layer on top of Elasticsearch</li>
 			</ul>
-			<br /> <br />
+			<br /> <br /><br><br><br><br><br><br><br><br>
 			<button type="button" class="btn btn-lg btn-block btn-primary"
 				data-toggle="modal" data-target="#ELKModalCenter">Launch</button>
 		</div>

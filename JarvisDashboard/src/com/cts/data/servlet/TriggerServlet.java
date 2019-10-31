@@ -162,6 +162,10 @@ import javax.servlet.http.HttpServletResponse;
 
 //import com.lowes.fdd.data.util.ConfigData;
 
+
+
+
+
 public class TriggerServlet extends HttpServlet {
 
        public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -196,6 +200,9 @@ public class TriggerServlet extends HttpServlet {
 
               requestDispatcher.forward(request, response);
        }
+       
+       
+      
 
        private String stack_implementation(HttpServletRequest request, HttpServletResponse response)
                      throws ServletException, IOException {
@@ -254,6 +261,49 @@ public class TriggerServlet extends HttpServlet {
               String DATA = "tools=" + mytools + "&tool_name=" + tool_name;
               DATA = DATA.toLowerCase();
               
+              String elasticsearch = null;
+              String logorkib = null;
+              String logandkib = null;
+              
+//              mytools = mytools.replaceAll("Elastisearch,", "");
+//              mytools = mytools.replaceAll("Elastisearch", "");
+//              mytools = mytools.replaceAll("Logstash,", "");
+//              mytools = mytools.replaceAll("Logstash", "");
+//              mytools = mytools.replaceAll("Kibana,", "");
+//              mytools = mytools.replaceAll("Kibana", "");
+//              if(mytools == null)
+//            	  mytools = "NONE";
+//              System.out.println("mytools" + mytools);
+             
+              
+              if(tool.equals("LM"))
+            	  tool = "Logging & Monitoring";
+            	  
+              
+              if(DATA.contains("elasticsearch")){
+            		System.out.println("User has selected Elasticsearch");
+            		elasticsearch = "Elasticsearch";
+            		
+              }
+              
+              if(DATA.contains("kibana")){
+          		System.out.println("User has selected Kibana");
+          		logorkib= "Kibana";
+            }
+              
+              if(DATA.contains("logstash")){
+            		System.out.println("User has selected Logstash");
+            		logorkib= "Logstash";
+              }
+              
+              if(DATA.contains("kibana") && DATA.contains("logstash")){
+            		System.out.println("User has selected Kibana & Logstash");
+            		logandkib= "Logstash & Kibana";
+            		logorkib=null;
+              }
+              
+              
+            
               
 
               // String JENKINS_DEPLOY_JOB =
@@ -265,8 +315,11 @@ public class TriggerServlet extends HttpServlet {
 
               triggerProdInfraJob(JENKINS_DEPLOY_JOB, JENKINS_USER_TOKEN, DATA);
               
-              request.setAttribute("triggerEvent", tool);
-//              request.setAttribute("triggerEvent1", tool);
+              request.setAttribute("triggerEventTool", tool);
+              request.setAttribute("mytools", mytools);
+              request.setAttribute("elasticsearch", elasticsearch);
+              request.setAttribute("logorkib", logorkib);
+              request.setAttribute("logandkib", logandkib);
               
               
 
