@@ -264,6 +264,7 @@ public class TriggerServlet extends HttpServlet {
               String elasticsearch = null;
               String logorkib = null;
               String logandkib = null;
+              String vault = null;
               
 //              mytools = mytools.replaceAll("Elastisearch,", "");
 //              mytools = mytools.replaceAll("Elastisearch", "");
@@ -302,6 +303,12 @@ public class TriggerServlet extends HttpServlet {
             		logorkib=null;
               }
               
+              if(DATA.contains("vault")){
+          		System.out.println("User has selected Vault");
+          		vault = "Vault";
+          		
+            }
+              
               
             
               
@@ -320,6 +327,7 @@ public class TriggerServlet extends HttpServlet {
               request.setAttribute("elasticsearch", elasticsearch);
               request.setAttribute("logorkib", logorkib);
               request.setAttribute("logandkib", logandkib);
+              request.setAttribute("vault", vault);
               
               
 

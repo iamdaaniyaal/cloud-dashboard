@@ -7,6 +7,7 @@
 	String elasticsearch = (String) request.getAttribute("elasticsearch");
 	String logorkib = (String) request.getAttribute("logorkib");
 	String logandkib = (String) request.getAttribute("logandkib");
+	String vault = (String) request.getAttribute("vault");
 %>
 
 <head>
@@ -78,7 +79,7 @@
 
 
 
-		<%
+	<%
 		if (triggerEvent != null && triggerEvent.length() > 0) {
 	%>
 
@@ -95,8 +96,8 @@
 	<%
 		}
 	%>
-	
-	
+
+
 
 	<%
 		if (triggerEventTool != null && triggerEventTool.length() > 0) {
@@ -104,8 +105,9 @@
 
 	<div class="alert alert-warning alert-dismissible fade show"
 		role="alert">
-		<strong><%=triggerEventTool%></strong> Setup InProgress.
-		You have selected the following tools  - <strong> <%=mytools%> </strong>
+		<strong><%=triggerEventTool%></strong> Setup InProgress. You have
+		selected the following tools - <strong> <%=mytools%>
+		</strong>
 		<%--  <strong><%=triggerEvent1%></strong> --%>
 		<button type="button" class="close" data-dismiss="alert"
 			aria-label="Close">
@@ -189,6 +191,46 @@
 	<%
 		}
 	%>
+
+
+	<%
+		if (vault != null && vault.length() > 0) {
+	%>
+
+	<div class="alert alert-warning alert-dismissible fade show"
+		role="alert">
+		You have selected <strong><%=vault%></strong> as one of the Tools. <strong><%=vault%></strong>
+		is<strong> SEALED</strong> when it is provisioned. <br> <strong>SSH
+		</strong>into the <strong>VAULT Instance </strong>and run the following 5
+		commands : <strong> <br> COMMAND 1 : vault operator init
+			> /etc/vault/init.file
+		</strong> (This command will generate unseal keys.)<br> <strong>
+			COMMAND 2 : cat /etc/vault/init.file </strong> (This command will display 5
+		unseal keys. Since the threshold is set to 3, use the first 3 keys to
+		unseal the Vault.)<br>
+		<!-- <strong> cat /etc/vault/init.file </strong>
+		</strong> will display 5 unseal keys. Since the threshold is set to 3, use the
+		first 3 keys to unseal the Vault by using the below commands : <br> -->
+		<strong>COMMAND 3 : vault operator unseal <strong>*enter
+				the unseal key 1* </strong>
+		</strong> <br> <strong>COMMAND 4 : vault operator unseal <strong>*enter
+				the unseal key 2* </strong>
+		</strong> <br> <strong> COMMAND 5 : vault operator unseal <strong>*enter
+				the unseal key 3* </strong>
+		</strong><br>
+		<%--  <strong><%=triggerEvent1%></strong> --%>
+		<button type="button" class="close" data-dismiss="alert"
+			aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<%
+		}
+	%>
+
+
+
 
 	<hr>
 
